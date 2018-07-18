@@ -31,5 +31,5 @@ const App = props => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyCKHMGBM8bgOOZEQnEPqpAvqdlnux13G54"
+  apiKey: process.env.REACT_APP_GOOGLE_API
 })(App);
