@@ -10,27 +10,25 @@ import About from "./component/About";
 import ContactForm from "./component/Contact";
 import Header from "./component/Header";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <MyNav>
-          <Fragment>
-            <Header />
-            <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
-            <Route path="/contact" exact component={ContactForm} />
-            <Route
-              path="/address"
-              exact
-              render={() => <AddressMapContainer google={this.props.google} />}
-            />
-          </Fragment>
-        </MyNav>
-      </div>
-    );
-  }
-}
+const App = props => {
+  return (
+    <div className="App">
+      <MyNav>
+        <Fragment>
+          <Header />
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={ContactForm} />
+          <Route
+            path="/address"
+            exact
+            render={() => <AddressMapContainer google={props.google} />}
+          />
+        </Fragment>
+      </MyNav>
+    </div>
+  );
+};
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyCKHMGBM8bgOOZEQnEPqpAvqdlnux13G54"
