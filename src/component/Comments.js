@@ -28,7 +28,7 @@ export default class Comment extends Component {
       <Fragment>
         <h2>Testimonials</h2>
         <CommentForm addComment={this.addComment} />
-        <div class="w3-container">
+        <div className="w3-container">
           {Object.keys(this.state.comments).map(key => (
             <UserComments
               key={key}

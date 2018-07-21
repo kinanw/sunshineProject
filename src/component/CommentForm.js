@@ -4,9 +4,11 @@ export default class CommentForm extends Component {
   commentRef = createRef();
   handleSubmit = e => {
     e.preventDefault();
+    alert(new Date().format("m-d-Y h:i:s"));
     const comment = {
       text: this.commentRef.current.value,
-      id: uuid.v4()
+      id: uuid.v4(),
+      createdt: Date.now()
     };
     this.props.addComment(comment);
     e.currentTarget.reset();

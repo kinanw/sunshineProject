@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as MyNav, Route } from "react-router-dom";
 import { GoogleApiWrapper } from "google-maps-react";
 import "./App.css";
